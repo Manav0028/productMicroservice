@@ -1,5 +1,10 @@
-package com.manavs.productMicroservice;
+package com.manavs.productMicroservice.controllers;
 
+import com.manavs.productMicroservice.models.response_models.ItemDetailResponse;
+import com.manavs.productMicroservice.models.db_models.ItemDetailsMaster;
+import com.manavs.productMicroservice.models.db_models.Product;
+import com.manavs.productMicroservice.models.response_models.ProductResponse;
+import com.manavs.productMicroservice.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

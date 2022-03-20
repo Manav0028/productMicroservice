@@ -1,4 +1,4 @@
-package com.manavs.productMicroservice;
+package com.manavs.productMicroservice.models.response_models;
 
 public class ItemDetailResponse {
 

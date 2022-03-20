@@ -1,8 +1,4 @@
-package com.manavs.productMicroservice;
-
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+package com.manavs.productMicroservice.models.db_models;
 
 import javax.persistence.*;
 

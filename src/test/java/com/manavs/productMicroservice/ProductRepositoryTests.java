@@ -1,7 +1,9 @@
 package com.manavs.productMicroservice;
 
-import org.checkerframework.checker.units.qual.A;
-import org.junit.jupiter.api.AfterEach;
+import com.manavs.productMicroservice.models.db_models.ItemDetailsMaster;
+import com.manavs.productMicroservice.models.db_models.Product;
+import com.manavs.productMicroservice.repository.ItemDetailsMasterRepository;
+import com.manavs.productMicroservice.repository.ProductRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
