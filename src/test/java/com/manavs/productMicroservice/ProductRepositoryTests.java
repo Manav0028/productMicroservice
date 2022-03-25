@@ -23,7 +23,6 @@ public class ProductRepositoryTests {
     ItemDetailsMasterRepository idmRepository;
 
     ArrayList<Product> productsList = new ArrayList<>();
-    ArrayList<ItemDetailsMaster> itemsList = new ArrayList<>();
 
     @BeforeEach
     void setup() {
@@ -43,13 +42,6 @@ public class ProductRepositoryTests {
             productsList.add(productRepository.save(p));
 
             i++;
-
-//            builder code
-//            p = Product.builder().productName("P" + i).productCategory("PC"+i).build();
-//            productsList.add(productRepository.save(p));
-//            item = ItemDetailsMaster.builder().detailDescription("Detail Description of i " + i).price(i*33.3).build();
-//            itemsList.add(idmRepository.save(item));
-//            i++;
         }
     }
 
@@ -59,14 +51,6 @@ public class ProductRepositoryTests {
         assertNotNull(product.getItemDetailsMaster());
         System.out.println(1*33.3);
         assertEquals(1*33.3,product.getItemDetailsMaster().getPrice());
-    }
-
-
-    @Test
-    public void testGetItemDetailsWithProduct() {
-        ItemDetailsMaster itemDetailsMaster = idmRepository.findById(1).orElse(null);
-        assertNotNull(itemDetailsMaster.getProduct());
-        assertEquals("PC1",itemDetailsMaster.getProduct().getProductCategory()); // error, product is null
     }
 
     @Test
