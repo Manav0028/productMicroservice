@@ -38,7 +38,7 @@ public class ProductController {
     public @ResponseBody String addProductDetails(@RequestBody Product product) {
         ProductStatus status = new ProductStatus(product, "PROCESS", product.getProductName() + "product added successfully ");
         rabbitTemplate.convertAndSend(ProductQueueConfig.EXCHANGE_NAME, ProductQueueConfig.ROUTING_KEY, status);
-        return "Product Add Request Received!";
+        return "Product Add Request Received.";
 
     }
 
