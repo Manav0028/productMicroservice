@@ -29,7 +29,7 @@ public class UserAuth extends WebSecurityConfigurerAdapter {
         http.csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/addProduct", "/removeProduct", "updateProduct").hasAnyAuthority("ADMIN")
-                .antMatchers("/**").hasAnyAuthority("ADMIN", "USER")
+                .antMatchers("/all").hasAnyAuthority("ADMIN", "USER")
                 .anyRequest().authenticated()
                 .and().httpBasic();
 
