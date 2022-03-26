@@ -64,9 +64,4 @@ public class ProductRepositoryTests {
         });
     }
 
-//    @AfterEach
-//    public void removeData() {
-//        productRepository.deleteAll();
-//        idmRepository.deleteAll();
-//    }
 }
