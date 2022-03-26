@@ -2,29 +2,30 @@ package com.manavs.productMicroservice.models.response_models;
 
 import com.manavs.productMicroservice.models.db_models.Product;
 
-public class ProductStatus {
+public class ProductMessage {
 
-    private int id;
+    private String id;
 
     private Product product;
     private String status;
     private String message;
 
-    public ProductStatus() {
+    public ProductMessage() {
     }
 
-    public ProductStatus(Product product, String status, String message) {
+    public ProductMessage(String id,Product product, String status, String message) {
+        this.id = id;
         this.product = product;
         this.status = status;
         this.message = message;
     }
 
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
